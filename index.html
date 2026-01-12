@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>inikanmy.. sawit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="brand">
+        <!-- SVG logo sawit -->
+        <svg width="40" height="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" fill="#E8F5E9" />
+          <path d="M18 20 C22 10, 34 8, 40 16 C32 16, 26 20, 18 20Z" fill="#2E7D32"/>
+          <path d="M22 24 C26 14, 38 12, 44 20 C36 20, 30 24, 22 24Z" fill="#388E3C"/>
+          <ellipse cx="30" cy="34" rx="10" ry="8" fill="#5D4037"/>
+          <circle cx="26" cy="32" r="4" fill="#FF7043"/>
+          <circle cx="32" cy="32" r="4" fill="#F4511E"/>
+          <circle cx="28" cy="36" r="4" fill="#FF8A65"/>
+          <circle cx="34" cy="36" r="4" fill="#FF7043"/>
+        </svg>
+        <span class="brand-name">inikanmy.. sawit</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Beranda</a></li>
+        <li><a href="#about">Tentang Sawit</a></li>
+        <li><a href="#benefit">Manfaat</a></li>
+        <li><a href="#history">Sejarah</a></li>
+        <li><a href="#game">Game Panen</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Kenal Lebih Dekat Sawit</h1>
+        <p>
+          inikanmy.. sawit adalah ruang ringan untuk mengenal apa itu sawit,
+          manfaatnya, dan sejarahnya, dilengkapi game panen sawit interaktif.
+        </p>
+        <a href="#game" class="btn-primary">Mainkan Game Panen</a>
+      </div>
+      <div class="hero-illustration">
+        <div class="hero-card">
+          <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="600" height="200" fill="#BBDEFB" />
+            <rect x="0" y="200" width="600" height="120" fill="#A5D6A7" />
+            <ellipse cx="150" cy="220" rx="120" ry="40" fill="#81C784" />
+            <ellipse cx="350" cy="230" rx="160" ry="50" fill="#66BB6A" />
+            <ellipse cx="520" cy="220" rx="120" ry="40" fill="#81C784" />
+            <rect x="80" y="150" width="16" height="70" fill="#5D4037" />
+            <rect x="260" y="150" width="16" height="70" fill="#5D4037" />
+            <rect x="440" y="150" width="16" height="70" fill="#5D4037" />
+            <g fill="#2E7D32">
+              <path d="M88 150 C60 130, 60 110, 88 120 C116 110, 116 130, 88 150Z" />
+              <path d="M268 150 C240 130, 240 110, 268 120 C296 110, 296 130, 268 150Z" />
+              <path d="M448 150 C420 130, 420 110, 448 120 C476 110, 476 130, 448 150Z" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apa itu sawit -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <h2>Apa itu Sawit</h2>
+        <p>
+          Kelapa sawit adalah tanaman penghasil minyak nabati yang minyaknya
+          diambil dari daging buah dan biji, dan menjadi salah satu sumber
+          minyak nabati paling banyak digunakan di dunia. [web:2][web:3]
+        </p>
+      </div>
+    </section>
+
+    <!-- Manfaat -->
+    <section id="benefit" class="section section-alt">
+      <div class="section-inner">
+        <h2>Manfaat Sawit</h2>
+        <ul>
+          <li>Digunakan dalam makanan, kosmetik, sabun, dan biodiesel.</li>
+          <li>Mendukung lapangan kerja dan ekonomi di negara produsen utama.</li>
+          <li>Dapat memberikan hasil minyak tinggi per hektar jika dikelola berkelanjutan.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sejarah -->
+    <section id="history" class="section">
+      <div class="section-inner">
+        <h2>Sejarah Singkat Sawit</h2>
+        <p>
+          Kelapa sawit berasal dari Afrika Barat, lalu menyebar ke Asia Tenggara
+          pada awal abad ke-20 dan berkembang menjadi komoditas penting di
+          Indonesia dan Malaysia. [web:10][web:13]
+        </p>
+      </div>
+    </section>
+
+    <!-- Game Panen -->
+    <section id="game" class="section section-game">
+      <div class="section-inner game-container">
+        <div class="game-header">
+          <h2>Game Panen Sawit</h2>
+          <div class="game-info">
+            Skor: <span id="score">0</span> |
+            Waktu: <span id="time">30</span>s
+          </div>
+        </div>
+
+        <button id="startGame" class="btn-primary btn-small">
+          Mulai Panen
+        </button>
+
+        <div class="game-board">
+          <svg id="gameSvg" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="600" height="200" fill="#BBDEFB" />
+            <rect x="0" y="200" width="600" height="120" fill="#A5D6A7" />
+            <ellipse cx="150" cy="220" rx="120" ry="40" fill="#81C784" />
+            <ellipse cx="350" cy="230" rx="160" ry="50" fill="#66BB6A" />
+            <ellipse cx="520" cy="220" rx="120" ry="40" fill="#81C784" />
+            <g id="trees">
+              <rect x="80" y="150" width="16" height="70" fill="#5D4037" />
+              <rect x="260" y="150" width="16" height="70" fill="#5D4037" />
+              <rect x="440" y="150" width="16" height="70" fill="#5D4037" />
+              <g fill="#2E7D32">
+                <path d="M88 150 C60 130, 60 110, 88 120 C116 110, 116 130, 88 150Z" />
+                <path d="M268 150 C240 130, 240 110, 268 120 C296 110, 296 130, 268 150Z" />
+                <path d="M448 150 C420 130, 420 110, 448 120 C476 110, 476 130, 448 150Z" />
+              </g>
+            </g>
+            <g id="fruits"></g>
+          </svg>
+        </div>
+
+        <p id="result" class="game-result"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 inikanmy.. sawit
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+                  </html>
