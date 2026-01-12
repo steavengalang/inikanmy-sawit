@@ -3,149 +3,540 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>inikanmy.. sawit</title>
+  <title>inikanmy.. sawit – Kenali Sawit Lebih Dekat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
       <div class="brand">
-        <!-- SVG logo sawit -->
-        <svg width="40" height="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="32" cy="32" r="30" fill="#E8F5E9" />
-          <path d="M18 20 C22 10, 34 8, 40 16 C32 16, 26 20, 18 20Z" fill="#2E7D32"/>
-          <path d="M22 24 C26 14, 38 12, 44 20 C36 20, 30 24, 22 24Z" fill="#388E3C"/>
-          <ellipse cx="30" cy="34" rx="10" ry="8" fill="#5D4037"/>
-          <circle cx="26" cy="32" r="4" fill="#FF7043"/>
-          <circle cx="32" cy="32" r="4" fill="#F4511E"/>
-          <circle cx="28" cy="36" r="4" fill="#FF8A65"/>
-          <circle cx="34" cy="36" r="4" fill="#FF7043"/>
+        <svg class="logo-svg" width="44" height="44" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#C8E6C9;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#E8F5E9;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="url(#bgGrad)" />
+          <path d="M16 22 C20 12, 32 10, 38 18 C30 18, 24 22, 16 22Z" fill="#1B5E20"/>
+          <path d="M20 26 C24 16, 36 14, 42 22 C34 22, 28 26, 20 26Z" fill="#2E7D32"/>
+          <path d="M24 30 C28 20, 40 18, 46 26 C38 26, 32 30, 24 30Z" fill="#388E3C"/>
+          <ellipse cx="30" cy="38" rx="11" ry="9" fill="#5D4037"/>
+          <circle cx="25" cy="36" r="4.5" fill="#FF5722"/>
+          <circle cx="32" cy="35" r="4.5" fill="#FF7043"/>
+          <circle cx="27" cy="41" r="4.5" fill="#FF8A65"/>
+          <circle cx="34" cy="40" r="4.5" fill="#FF6F00"/>
         </svg>
-        <span class="brand-name">inikanmy.. sawit</span>
+        <span class="brand-name">inikanmy<span class="dot">..</span> sawit</span>
       </div>
       <ul class="nav-links">
         <li><a href="#hero">Beranda</a></li>
-        <li><a href="#about">Tentang Sawit</a></li>
+        <li><a href="#about">Tentang</a></li>
         <li><a href="#benefit">Manfaat</a></li>
         <li><a href="#history">Sejarah</a></li>
-        <li><a href="#game">Game Panen</a></li>
+        <li><a href="#game" class="nav-cta">Game Panen</a></li>
       </ul>
+      <button class="menu-toggle" id="menuToggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
     </nav>
   </header>
 
   <main>
     <!-- Hero -->
     <section id="hero" class="hero">
-      <div class="hero-content">
-        <h1>Kenal Lebih Dekat Sawit</h1>
-        <p>
-          inikanmy.. sawit adalah ruang ringan untuk mengenal apa itu sawit,
-          manfaatnya, dan sejarahnya, dilengkapi game panen sawit interaktif.
-        </p>
-        <a href="#game" class="btn-primary">Mainkan Game Panen</a>
-      </div>
-      <div class="hero-illustration">
-        <div class="hero-card">
-          <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="600" height="200" fill="#BBDEFB" />
-            <rect x="0" y="200" width="600" height="120" fill="#A5D6A7" />
-            <ellipse cx="150" cy="220" rx="120" ry="40" fill="#81C784" />
-            <ellipse cx="350" cy="230" rx="160" ry="50" fill="#66BB6A" />
-            <ellipse cx="520" cy="220" rx="120" ry="40" fill="#81C784" />
-            <rect x="80" y="150" width="16" height="70" fill="#5D4037" />
-            <rect x="260" y="150" width="16" height="70" fill="#5D4037" />
-            <rect x="440" y="150" width="16" height="70" fill="#5D4037" />
-            <g fill="#2E7D32">
-              <path d="M88 150 C60 130, 60 110, 88 120 C116 110, 116 130, 88 150Z" />
-              <path d="M268 150 C240 130, 240 110, 268 120 C296 110, 296 130, 268 150Z" />
-              <path d="M448 150 C420 130, 420 110, 448 120 C476 110, 476 130, 448 150Z" />
-            </g>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- Apa itu sawit -->
-    <section id="about" class="section">
-      <div class="section-inner">
-        <h2>Apa itu Sawit</h2>
-        <p>
-          Kelapa sawit adalah tanaman penghasil minyak nabati yang minyaknya
-          diambil dari daging buah dan biji, dan menjadi salah satu sumber
-          minyak nabati paling banyak digunakan di dunia. [web:2][web:3]
-        </p>
-      </div>
-    </section>
-
-    <!-- Manfaat -->
-    <section id="benefit" class="section section-alt">
-      <div class="section-inner">
-        <h2>Manfaat Sawit</h2>
-        <ul>
-          <li>Digunakan dalam makanan, kosmetik, sabun, dan biodiesel.</li>
-          <li>Mendukung lapangan kerja dan ekonomi di negara produsen utama.</li>
-          <li>Dapat memberikan hasil minyak tinggi per hektar jika dikelola berkelanjutan.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Sejarah -->
-    <section id="history" class="section">
-      <div class="section-inner">
-        <h2>Sejarah Singkat Sawit</h2>
-        <p>
-          Kelapa sawit berasal dari Afrika Barat, lalu menyebar ke Asia Tenggara
-          pada awal abad ke-20 dan berkembang menjadi komoditas penting di
-          Indonesia dan Malaysia. [web:10][web:13]
-        </p>
-      </div>
-    </section>
-
-    <!-- Game Panen -->
-    <section id="game" class="section section-game">
-      <div class="section-inner game-container">
-        <div class="game-header">
-          <h2>Game Panen Sawit</h2>
-          <div class="game-info">
-            Skor: <span id="score">0</span> |
-            Waktu: <span id="time">30</span>s
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">🌱 Edukasi & Interaktif</div>
+          <h1 class="hero-title">
+            Kenali Sawit <br/>
+            <span class="gradient-text">Lebih Dekat</span>
+          </h1>
+          <p class="hero-desc">
+            Pelajari apa itu kelapa sawit, manfaatnya bagi kehidupan sehari-hari,
+            sejarah perkembangannya, dan uji kemampuanmu dalam game panen interaktif
+            berbasis SVG yang seru.
+          </p>
+          <div class="hero-cta">
+            <a href="#game" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Mainkan Game
+            </a>
+            <a href="#about" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">85%+</div>
+              <div class="stat-label">Produksi Global</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">17 Juta</div>
+              <div class="stat-label">Hektar Perkebunan</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1000+</div>
+              <div class="stat-label">Produk Berbasis Sawit</div>
+            </div>
           </div>
         </div>
-
-        <button id="startGame" class="btn-primary btn-small">
-          Mulai Panen
-        </button>
-
-        <div class="game-board">
-          <svg id="gameSvg" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="600" height="200" fill="#BBDEFB" />
-            <rect x="0" y="200" width="600" height="120" fill="#A5D6A7" />
-            <ellipse cx="150" cy="220" rx="120" ry="40" fill="#81C784" />
-            <ellipse cx="350" cy="230" rx="160" ry="50" fill="#66BB6A" />
-            <ellipse cx="520" cy="220" rx="120" ry="40" fill="#81C784" />
-            <g id="trees">
-              <rect x="80" y="150" width="16" height="70" fill="#5D4037" />
-              <rect x="260" y="150" width="16" height="70" fill="#5D4037" />
-              <rect x="440" y="150" width="16" height="70" fill="#5D4037" />
-              <g fill="#2E7D32">
-                <path d="M88 150 C60 130, 60 110, 88 120 C116 110, 116 130, 88 150Z" />
-                <path d="M268 150 C240 130, 240 110, 268 120 C296 110, 296 130, 268 150Z" />
-                <path d="M448 150 C420 130, 420 110, 448 120 C476 110, 476 130, 448 150Z" />
+        <div class="hero-visual">
+          <div class="glass-card floating">
+            <svg class="hero-illustration" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#64B5F6;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#BBDEFB;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#81C784;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:1" />
+                </linearGradient>
+                <filter id="shadow">
+                  <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+                </filter>
+              </defs>
+              
+              <!-- Sky -->
+              <rect x="0" y="0" width="600" height="250" fill="url(#skyGrad)" />
+              
+              <!-- Sun -->
+              <circle cx="480" cy="60" r="35" fill="#FFF59D" opacity="0.9"/>
+              <circle cx="480" cy="60" r="40" fill="#FFEB3B" opacity="0.5"/>
+              
+              <!-- Clouds -->
+              <ellipse cx="120" cy="50" rx="35" ry="20" fill="#fff" opacity="0.8"/>
+              <ellipse cx="140" cy="50" rx="40" ry="22" fill="#fff" opacity="0.8"/>
+              <ellipse cx="350" cy="80" rx="45" ry="25" fill="#fff" opacity="0.7"/>
+              <ellipse cx="375" cy="80" rx="38" ry="22" fill="#fff" opacity="0.7"/>
+              
+              <!-- Ground -->
+              <rect x="0" y="250" width="600" height="150" fill="url(#groundGrad)" />
+              
+              <!-- Hills -->
+              <ellipse cx="150" cy="270" rx="140" ry="50" fill="#4CAF50" opacity="0.6"/>
+              <ellipse cx="380" cy="280" rx="180" ry="60" fill="#388E3C" opacity="0.5"/>
+              <ellipse cx="540" cy="270" rx="130" ry="45" fill="#4CAF50" opacity="0.6"/>
+              
+              <!-- Palm Trees -->
+              <g class="palm-tree" filter="url(#shadow)">
+                <!-- Tree 1 -->
+                <rect x="100" y="200" width="18" height="80" rx="2" fill="#6D4C41" />
+                <g fill="#2E7D32">
+                  <path d="M109 200 Q90 170, 85 155 Q88 165, 95 175 Q100 185, 109 200Z" />
+                  <path d="M109 200 Q128 170, 133 155 Q130 165, 123 175 Q118 185, 109 200Z" />
+                  <path d="M109 200 Q95 175, 70 165 Q80 170, 90 180 Q100 190, 109 200Z" />
+                  <path d="M109 200 Q123 175, 148 165 Q138 170, 128 180 Q118 190, 109 200Z" />
+                  <path d="M109 200 Q109 170, 109 145 Q109 160, 109 180 Q109 190, 109 200Z" />
+                </g>
+                <!-- Fruits cluster -->
+                <ellipse cx="109" cy="210" rx="14" ry="12" fill="#5D4037"/>
+                <circle cx="103" cy="208" r="5" fill="#FF5722"/>
+                <circle cx="110" cy="206" r="5" fill="#FF7043"/>
+                <circle cx="115" cy="210" r="5" fill="#FF6F00"/>
+                <circle cx="107" cy="213" r="5" fill="#FF8A65"/>
+                
+                <!-- Tree 2 -->
+                <rect x="280" y="190" width="20" height="90" rx="2" fill="#6D4C41" />
+                <g fill="#1B5E20">
+                  <path d="M290 190 Q270 155, 263 135 Q267 148, 275 165 Q282 178, 290 190Z" />
+                  <path d="M290 190 Q310 155, 317 135 Q313 148, 305 165 Q298 178, 290 190Z" />
+                  <path d="M290 190 Q273 165, 245 150 Q257 157, 270 172 Q280 182, 290 190Z" />
+                  <path d="M290 190 Q307 165, 335 150 Q323 157, 310 172 Q300 182, 290 190Z" />
+                  <path d="M290 190 Q290 158, 290 130 Q290 150, 290 175 Q290 183, 290 190Z" />
+                </g>
+                <ellipse cx="290" cy="200" rx="16" ry="14" fill="#5D4037"/>
+                <circle cx="283" cy="198" r="6" fill="#FF5722"/>
+                <circle cx="291" cy="195" r="6" fill="#FF7043"/>
+                <circle cx="297" cy="200" r="6" fill="#FF6F00"/>
+                <circle cx="288" cy="204" r="6" fill="#FF8A65"/>
+                
+                <!-- Tree 3 -->
+                <rect x="470" y="205" width="17" height="75" rx="2" fill="#6D4C41" />
+                <g fill="#2E7D32">
+                  <path d="M478 205 Q460 180, 456 165 Q459 173, 465 185 Q472 197, 478 205Z" />
+                  <path d="M478 205 Q496 180, 500 165 Q497 173, 491 185 Q484 197, 478 205Z" />
+                  <path d="M478 205 Q465 185, 442 175 Q452 180, 462 190 Q470 200, 478 205Z" />
+                  <path d="M478 205 Q491 185, 514 175 Q504 180, 494 190 Q486 200, 478 205Z" />
+                  <path d="M478 205 Q478 180, 478 160 Q478 175, 478 195 Q478 200, 478 205Z" />
+                </g>
+                <ellipse cx="478" cy="215" rx="13" ry="11" fill="#5D4037"/>
+                <circle cx="473" cy="213" r="5" fill="#FF5722"/>
+                <circle cx="479" cy="211" r="5" fill="#FF7043"/>
+                <circle cx="484" cy="215" r="5" fill="#FF6F00"/>
+                <circle cx="477" cy="218" r="5" fill="#FF8A65"/>
               </g>
-            </g>
-            <g id="fruits"></g>
-          </svg>
+              
+              <!-- Road path -->
+              <path d="M0 320 Q150 310, 300 315 Q450 320, 600 310" 
+                    fill="none" stroke="#795548" stroke-width="3" opacity="0.4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container section-grid">
+        <div class="section-visual">
+          <div class="feature-card">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="90" fill="#E8F5E9"/>
+              <circle cx="100" cy="100" r="70" fill="#C8E6C9"/>
+              <g transform="translate(100, 100)">
+                <ellipse cx="0" cy="10" rx="35" ry="28" fill="#5D4037"/>
+                <circle cx="-12" cy="5" r="12" fill="#FF5722"/>
+                <circle cx="8" cy="3" r="12" fill="#FF7043"/>
+                <circle cx="-5" cy="15" r="12" fill="#FF8A65"/>
+                <circle cx="12" cy="14" r="12" fill="#FF6F00"/>
+                <path d="M-20 -10 Q-30 -40, -25 -55 Q-22 -45, -18 -30 Q-15 -15, -10 -10Z" fill="#2E7D32"/>
+                <path d="M20 -10 Q30 -40, 25 -55 Q22 -45, 18 -30 Q15 -15, 10 -10Z" fill="#2E7D32"/>
+                <path d="M0 -15 Q0 -45, 0 -60 Q0 -48, 0 -30 Q0 -20, 0 -15Z" fill="#1B5E20"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="section-content">
+          <div class="section-tag">Pengenalan</div>
+          <h2 class="section-title">Apa itu Kelapa Sawit?</h2>
+          <p class="section-desc">
+            Kelapa sawit (<em>Elaeis guineensis</em>) adalah tanaman tropis penghasil
+            minyak nabati yang paling produktif di dunia. Minyaknya diekstrak dari daging buah
+            (menghasilkan minyak sawit/CPO) dan kernel biji (menghasilkan minyak inti sawit).
+          </p>
+          <p class="section-desc">
+            Sawit menjadi komoditas strategis karena efisiensi lahan tinggi—menghasilkan
+            lebih banyak minyak per hektar dibanding sumber minyak nabati lain seperti
+            kedelai atau kanola.
+          </p>
+          <div class="info-grid">
+            <div class="info-item">
+              <div class="info-icon">🌴</div>
+              <div class="info-text">
+                <div class="info-label">Nama Latin</div>
+                <div class="info-value">Elaeis guineensis</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🌍</div>
+              <div class="info-text">
+                <div class="info-label">Asal</div>
+                <div class="info-value">Afrika Barat</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefit" class="section section-alt">
+      <div class="container">
+        <div class="section-header center">
+          <div class="section-tag">Dampak Positif</div>
+          <h2 class="section-title">Manfaat Kelapa Sawit</h2>
+          <p class="section-subtitle">
+            Dari dapur hingga industri, sawit memainkan peran penting dalam kehidupan modern
+          </p>
+        </div>
+        
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" fill="#FFF3E0"/>
+                <path d="M20 28 L28 36 L44 20" stroke="#FF6F00" stroke-width="4" stroke-linecap="round" fill="none"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Produk Sehari-hari</h3>
+            <p class="benefit-desc">
+              Digunakan dalam mie instan, margarin, biskuit, cokelat, sabun, sampo,
+              kosmetik, dan bahkan bahan bakar biodiesel.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" fill="#E8F5E9"/>
+                <path d="M32 16 L32 48 M18 32 L46 32" stroke="#2E7D32" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="32" cy="32" r="12" fill="none" stroke="#2E7D32" stroke-width="3"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Ekonomi Nasional</h3>
+            <p class="benefit-desc">
+              Menyerap jutaan tenaga kerja dan menjadi penyumbang devisa utama di
+              Indonesia yang memasok ~60% produksi dunia.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" fill="#E3F2FD"/>
+                <path d="M32 20 Q38 26, 32 32 Q26 26, 32 20 Z" fill="#1976D2"/>
+                <path d="M32 32 Q38 38, 32 44 Q26 38, 32 32 Z" fill="#1976D2" opacity="0.7"/>
+                <circle cx="32" cy="26" r="2" fill="#fff"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Efisiensi Lahan</h3>
+            <p class="benefit-desc">
+              Sawit menghasilkan 4-10x lebih banyak minyak per hektar dibanding
+              kedelai, kanola, atau bunga matahari.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section id="history" class="section">
+      <div class="container">
+        <div class="section-header center">
+          <div class="section-tag">Perjalanan Waktu</div>
+          <h2 class="section-title">Sejarah Kelapa Sawit</h2>
         </div>
 
-        <p id="result" class="game-result"></p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">3000 SM</div>
+              <h4 class="timeline-title">Era Afrika Kuno</h4>
+              <p class="timeline-desc">
+                Kelapa sawit dimanfaatkan di Afrika Barat untuk konsumsi makanan,
+                minyak upacara, dan obat tradisional selama ribuan tahun.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1848</div>
+              <h4 class="timeline-title">Masuk Asia Tenggara</h4>
+              <p class="timeline-desc">
+                Bibit sawit dibawa ke Bogor, Indonesia sebagai tanaman hias di
+                Kebun Raya. Kemudian menyebar ke Malaysia dan Thailand.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1911</div>
+              <h4 class="timeline-title">Perkebunan Komersial</h4>
+              <p class="timeline-desc">
+                Perkebunan sawit skala besar pertama dibuka di Sumatera untuk
+                memenuhi permintaan industri sabun dan pelumas Eropa.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1960-an</div>
+              <h4 class="timeline-title">Revolusi Sawit</h4>
+              <p class="timeline-desc">
+                Malaysia dan Indonesia memperluas perkebunan secara masif.
+                Sawit menjadi industri strategis nasional.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2020-an</div>
+              <h4 class="timeline-title">Era Berkelanjutan</h4>
+              <p class="timeline-desc">
+                Fokus pada praktik berkelanjutan dengan sertifikasi RSPO, ISPO,
+                dan MSPO untuk menjaga kelestarian lingkungan dan sosial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Section -->
+    <section id="game" class="section section-game">
+      <div class="container">
+        <div class="section-header center">
+          <div class="section-tag">Interaktif</div>
+          <h2 class="section-title">Game Panen Sawit</h2>
+          <p class="section-subtitle">
+            Uji refleks dan kecepatan kamu dalam memanen buah sawit!
+          </p>
+        </div>
+
+        <div class="game-wrapper">
+          <div class="game-container glass-card">
+            <div class="game-header">
+              <div class="game-stats">
+                <div class="stat-box">
+                  <div class="stat-label">Skor</div>
+                  <div class="stat-value" id="score">0</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Waktu</div>
+                  <div class="stat-value" id="time">30</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Level</div>
+                  <div class="stat-value" id="level">1</div>
+                </div>
+              </div>
+              <button class="btn btn-game" id="startGame">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                Mulai
+              </button>
+            </div>
+
+            <div class="game-board" id="gameBoard">
+              <svg id="gameSvg" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="gameSkyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#B3E5FC;stop-opacity:1" />
+                  </linearGradient>
+                  <linearGradient id="gameGroundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#66BB6A;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#81C784;stop-opacity:1" />
+                  </linearGradient>
+                  <filter id="gameShadow">
+                    <feDropShadow dx="0" dy="3" stdDeviation="2" flood-opacity="0.3"/>
+                  </filter>
+                </defs>
+                
+                <!-- Background -->
+                <rect x="0" y="0" width="800" height="280" fill="url(#gameSkyGrad)" />
+                <circle cx="650" cy="60" r="30" fill="#FFF59D" opacity="0.8"/>
+                <rect x="0" y="280" width="800" height="170" fill="url(#gameGroundGrad)" />
+                
+                <!-- Trees -->
+                <g id="gameTrees">
+                  <g filter="url(#gameShadow)">
+                    <rect x="120" y="220" width="22" height="85" rx="3" fill="#6D4C41" />
+                    <g fill="#1B5E20">
+                      <path d="M131 220 Q115 195, 110 175 Q113 185, 120 200 Q125 212, 131 220Z" />
+                      <path d="M131 220 Q147 195, 152 175 Q149 185, 142 200 Q137 212, 131 220Z" />
+                      <path d="M131 220 Q120 200, 95 188 Q105 193, 115 205 Q125 215, 131 220Z" />
+                      <path d="M131 220 Q142 200, 167 188 Q157 193, 147 205 Q137 215, 131 220Z" />
+                      <path d="M131 220 Q131 195, 131 170 Q131 185, 131 205 Q131 213, 131 220Z" />
+                    </g>
+                  </g>
+                  
+                  <g filter="url(#gameShadow)">
+                    <rect x="380" y="210" width="24" height="95" rx="3" fill="#6D4C41" />
+                    <g fill="#2E7D32">
+                      <path d="M392 210 Q375 180, 368 155 Q372 168, 380 190 Q386 202, 392 210Z" />
+                      <path d="M392 210 Q409 180, 416 155 Q412 168, 404 190 Q398 202, 392 210Z" />
+                      <path d="M392 210 Q378 188, 350 172 Q362 179, 375 195 Q385 205, 392 210Z" />
+                      <path d="M392 210 Q406 188, 434 172 Q422 179, 409 195 Q399 205, 392 210Z" />
+                      <path d="M392 210 Q392 178, 392 150 Q392 170, 392 195 Q392 203, 392 210Z" />
+                    </g>
+                  </g>
+                  
+                  <g filter="url(#gameShadow)">
+                    <rect x="640" y="225" width="20" height="80" rx="3" fill="#6D4C41" />
+                    <g fill="#1B5E20">
+                      <path d="M650 225 Q635 202, 631 183 Q634 192, 640 208 Q645 218, 650 225Z" />
+                      <path d="M650 225 Q665 202, 669 183 Q666 192, 660 208 Q655 218, 650 225Z" />
+                      <path d="M650 225 Q638 208, 615 197 Q625 202, 635 213 Q645 221, 650 225Z" />
+                      <path d="M650 225 Q662 208, 685 197 Q675 202, 665 213 Q655 221, 650 225Z" />
+                      <path d="M650 225 Q650 200, 650 178 Q650 192, 650 213 Q650 220, 650 225Z" />
+                    </g>
+                  </g>
+                </g>
+                
+                <g id="fruits"></g>
+                <g id="particles"></g>
+              </svg>
+              
+              <div class="game-overlay" id="gameOverlay">
+                <div class="game-message" id="gameMessage">
+                  <div class="message-icon">🎮</div>
+                  <div class="message-title">Siap Panen?</div>
+                  <div class="message-desc">Klik buah sawit yang muncul di pohon!</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-instructions">
+              <div class="instruction-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/>
+                </svg>
+                <span>Klik buah untuk panen</span>
+              </div>
+              <div class="instruction-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0 0 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a8.994 8.994 0 0 0 7.03-14.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="currentColor"/>
+                </svg>
+                <span>30 detik per level</span>
+              </div>
+              <div class="instruction-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V7.89l7-3.11v8.21z" fill="currentColor"/>
+                </svg>
+                <span>Skor naik = level lebih cepat</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    © 2026 inikanmy.. sawit
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <svg width="36" height="36" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" fill="#E8F5E9" opacity="0.2"/>
+          <path d="M18 22 C22 12, 32 10, 38 18 C30 18, 24 22, 18 22Z" fill="#fff" opacity="0.8"/>
+          <path d="M22 26 C26 16, 36 14, 42 22 C34 22, 28 26, 22 26Z" fill="#fff" opacity="0.8"/>
+          <ellipse cx="30" cy="38" rx="11" ry="9" fill="#fff" opacity="0.6"/>
+        </svg>
+        <div>
+          <div class="footer-name">inikanmy.. sawit</div>
+          <div class="footer-tagline">Edukasi Sawit Interaktif</div>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <a href="#hero">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#benefit">Manfaat</a>
+        <a href="#history">Sejarah</a>
+        <a href="#game">Game</a>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 inikanmy.. sawit · Dibuat dengan ❤️ untuk edukasi</p>
+      </div>
+    </div>
   </footer>
 
   <script src="game.js"></script>
 </body>
-</html>
+  </html>
